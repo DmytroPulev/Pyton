@@ -5,8 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Веб-підручник з інформатики: Програмування на Python</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Загрузка скрипта виджета погоды -->
-    <script src="https://weatherwidget.io/js/widget.min.js"></script>
+    <style>
+        /* Дополнительные стили для улучшения отображения виджета */
+        #weather-widget {
+            margin-top: 20px; /* Пример отступа сверху */
+            text-align: center; /* Выравнивание по центру */
+        }
+        .weatherwidget-io {
+            display: inline-block; /* Размещаем как блочный элемент */
+            font-family: Arial, sans-serif; /* Шрифт текста виджета */
+            text-decoration: none; /* Убираем подчеркивание ссылки */
+            color: #333; /* Цвет текста */
+            border: 1px solid #ccc; /* Параметры рамки */
+            padding: 10px 20px; /* Внутренние отступы */
+            border-radius: 5px; /* Скругленные углы */
+            background-color: #f0f0f0; /* Цвет фона */
+        }
+        .weatherwidget-io:hover {
+            background-color: #e0e0e0; /* Цвет фона при наведении */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -31,18 +49,8 @@
         </section>
         <!-- Вставка виджета погоды -->
         <div id="weather-widget">
-            <a class="weatherwidget-io" href="https://sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%BA%D0%B8%D0%BB%D0%B8%D1%8F" data-label_1="Кілія" data-label_2="Погода" data-theme="original">Кілія Погода</a>
-            <script>
-                !function(d,s,id){
-                    var js,fjs=d.getElementsByTagName(s)[0];
-                    if(!d.getElementById(id)){
-                        js=d.createElement(s);
-                        js.id=id;
-                        js.src='https://weatherwidget.io/js/widget.min.js';
-                        fjs.parentNode.insertBefore(js,fjs);
-                    }
-                }(document,'script','weatherwidget-io-js');
-            </script>
+            <a class="weatherwidget-io" href="https://sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%BA%D0%B8%D0%BB%D0%B8%D1%8F" 
+               data-label_1="Кілія" data-label_2="Погода" data-theme="original">Кілія Погода</a>
         </div>
     </main>
     <footer>
@@ -52,5 +60,7 @@
     <div id="banner">
         <img src="banner.png" alt="Рекламний банер">
     </div>
+    <!-- Загрузка скрипта виджета погоды в конце body -->
+    <script src="https://weatherwidget.io/js/widget.min.js"></script>
 </body>
 </html>

@@ -19,24 +19,15 @@
             color: #333; /* Цвет текста */
             font-family: Arial, sans-serif; /* Шрифт текста */
         }
-
         /* Стили для баннеров */
-        .banner-container {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
+        #banner {
+            display: inline-block;
+            margin-right: 10px;
         }
-
-        .banner {
-            width: 120px; /* Ширина баннера */
-            height: 60px; /* Высота баннера */
-            margin-right: 10px; /* Отступ между баннерами */
-        }
-
-        .banner img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        #gif-banner {
+            width: 113px;
+            height: 226px;
+            display: inline-block;
         }
     </style>
 </head>
@@ -49,40 +40,34 @@
         <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
-                <li><a href="lessons.html">Уроки</a></li>
-                <li><a href="videos.html">Відео</a></li>
-                <li><a href="links.html">Корисні посилання</a></li>
-                <li><a href="contacts.html">Контакти</a></li>
+                <li><a href="lessons.html">Уроки</а></li>
+                <li><a href="videos.html">Відео</а></li>
+                <li><a href="links.html">Корисні посилання</а></li>
+                <li><a href="contacts.html">Контакти</а></li>
             </ul>
         </nav>
     </header>
     <main>
         <section id="content">
             <h2>Ласкаво просимо!</h2>
-            <p>Цей веб-підручник допоможе вам освоїти основи програмування на Python.</p>
+            <p>Цей веб-підручник допоможе вам освоїти основи програмування на Python.</п>
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Веб-підручник з інформатики</p>
+        <p>&copy; 2024 Веб-підручник з інформатики</п>
     </footer>
-    <!-- Контейнер для баннеров -->
-    <div class="banner-container">
-        <!-- Первый баннер -->
-        <div class="banner">
-            <img src="banner.png" alt="Рекламний банер 1">
-        </div>
-
-        <!-- Второй баннер -->
-        <div class="banner">
-            <img src="banner.gif" alt="Рекламний банер 2">
-        </div>
+    <!-- Банеры -->
+    <div id="banner">
+        <img src="banner.png" alt="Рекламний банер">
     </div>
-
+    <div id="gif-banner">
+        <img src="banner.gif" alt="Рекламний банер">
+    </div>
     <!-- Виджет курса валют -->
     <div class="currency-widget">
         <h3>Курс USD/UAH</h3>
-        <div id="exchange-rate"></div>
-    </div>
+        <div id="exchange-rate"></див>
+    </див>
 
     <!-- Скрипт для получения курса валют -->
     <script>
@@ -105,4 +90,3 @@
     </script>
 </body>
 </html>
- 

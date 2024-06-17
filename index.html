@@ -107,5 +107,27 @@
         // Вызов функции загрузки при загрузке страницы
         document.addEventListener('DOMContentLoaded', loadExchangeRate);
     </script>
+    <script>
+        // JavaScript код для відображення часу
+        var currentTimeElement = document.getElementById('current-time');
+
+        function updateClock() {
+            var now = new Date();
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+
+            hours = ('0' + hours).slice(-2);
+            minutes = ('0' + minutes).slice(-2);
+            seconds = ('0' + seconds).slice(-2);
+
+            var timeString = hours + ':' + minutes + ':' + seconds;
+
+            currentTimeElement.textContent = timeString;
+        }
+
+        updateClock();
+        setInterval(updateClock, 1000);
+    </script>
 </body>
 </html>

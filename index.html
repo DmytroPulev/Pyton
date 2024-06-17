@@ -12,7 +12,9 @@
             background-color: #f2f2f2;
             border: 1px solid #ccc;
             padding: 10px;
-            margin: 0 auto;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
             text-align: center;
         }
     </style>
@@ -36,10 +38,6 @@
     <main>
         <section id="content">
             <h2>Курс валют</h2>
-            <div class="currency-widget">
-                <h3>Курс USD/UAH</h3>
-                <div id="exchange-rate"></div>
-            </div>
         </section>
     </main>
     <footer>
@@ -48,6 +46,12 @@
     <!-- Банер -->
     <div id="banner">
         <img src="banner.png" alt="Рекламний банер">
+    </div>
+
+    <!-- Виджет курса валют -->
+    <div class="currency-widget">
+        <h3>Курс USD/UAH</h3>
+        <div id="exchange-rate"></div>
     </div>
 
     <!-- Скрипт для получения курса валют -->

@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Веб-підручник з інформатики: Програмування на Python</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для виджета валютного курса */
+        .currency-widget {
+            width: 250px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <!-- Логотип і основний заголовок сайту -->
+        <!-- Логотип и основной заголовок сайта -->
         <img src="logo.png" alt="Логотип" class="logo">
         <h1>Веб-підручник з інформатики: Програмування на Python</h1>
-        <!-- Навігаційне меню -->
+        <!-- Навигационное меню -->
         <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
@@ -24,8 +35,11 @@
     </header>
     <main>
         <section id="content">
-            <h2>Ласкаво просимо!</h2>
-            <p>Цей веб-підручник допоможе вам освоїти основи програмування на Python.</p>
+            <h2>Курс валют</h2>
+            <div class="currency-widget">
+                <h3>Курс USD/UAH</h3>
+                <div id="exchange-rate"></div>
+            </div>
         </section>
     </main>
     <footer>
@@ -35,5 +49,27 @@
     <div id="banner">
         <img src="banner.png" alt="Рекламний банер">
     </div>
+
+    <!-- Скрипт для получения курса валют -->
+    <script>
+        // Функция для загрузки данных с API курсов валют
+        function loadExchangeRate() {
+            fetch('https://api.exchangerate-api.com/v4/latest/USD')
+                .then(response => response.json())
+                .then(data => {
+                    const rate = data.rates.UAH;
+                    document.getElementById('exchange-rate').innerHTML = `1 USD = ${rate.toFixed(2)} UAH`;
+                })
+                .catch(error => {
+                    console.error('Ошибка загрузки курса валют:', error);
+                    document.getElementById('exchange-rate').innerHTML = 'Ошибка загрузки курса валют';
+                });
+        }
+
+        // Вызов функции загрузки при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            loadExchangeRate();
+        });
+    </script>
 </body>
 </html>

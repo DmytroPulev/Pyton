@@ -20,9 +20,15 @@
             font-family: Arial, sans-serif; /* Шрифт текста */
         }
 
-        /* Стили для баннера */
-        .banner {
+        /* Стили для баннеров */
+        .banner-container {
+            display: flex;
+            justify-content: space-between;
             margin-top: 20px;
+        }
+
+        .banner {
+            width: 48%; /* Ширина баннера */
         }
 
         .banner img {
@@ -56,14 +62,17 @@
     <footer>
         <p>&copy; 2024 Веб-підручник з інформатики</p>
     </footer>
-    <!-- Первый баннер -->
-    <div class="banner">
-        <img src="banner.png" alt="Рекламний банер 1">
-    </div>
+    <!-- Контейнер для баннеров -->
+    <div class="banner-container">
+        <!-- Первый баннер -->
+        <div class="banner">
+            <img src="banner.png" alt="Рекламний банер 1">
+        </div>
 
-    <!-- Второй баннер -->
-    <div class="banner">
-        <img src="banner.gif" alt="Рекламний банер 2">
+        <!-- Второй баннер -->
+        <div class="banner">
+            <img src="banner.gif" alt="Рекламний банер 2">
+        </div>
     </div>
 
     <!-- Виджет курса валют -->

@@ -71,13 +71,11 @@ footer {
     position: fixed;
     bottom: 10px;
     left: 10px;
-    width: 180px; /* Ширина банера */
-    height: 90px; /* Висота банера */
+    width: 6cm; /* Ширина банера */
+    height: 3cm; /* Висота банера */
 }
 
 #banner img {
     width: 100%;
     height: 100%;
 }
-
-

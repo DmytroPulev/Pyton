@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Веб-підручник з інформатики: Програмування на Python</title>
+    <title>Веб-підручник з інформатики: Програмування на Python</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Стили для виджета валютного курса */
@@ -35,7 +35,13 @@
             </ul>
         </nav>
     </header>
-        <footer>
+    <main>
+        <section id="content">
+            <h2>Ласкаво просимо!</h2>
+            <p>Цей веб-підручник допоможе вам освоїти основи програмування на Python.</p>
+        </section>
+    </main>
+    <footer>
         <p>&copy; 2024 Веб-підручник з інформатики</p>
     </footer>
     <!-- Банер -->
@@ -66,9 +72,7 @@
         }
 
         // Вызов функции загрузки при загрузке страницы
-        document.addEventListener('DOMContentLoaded', () => {
-            loadExchangeRate();
-        });
+        document.addEventListener('DOMContentLoaded', loadExchangeRate);
     </script>
 </body>
 </html>

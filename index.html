@@ -5,26 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Веб-підручник з інформатики: Програмування на Python</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Стили для виджета погоды -->
-    <style>
-        /* Базовый стиль для ссылки виджета */
-        .weatherwidget-io {
-            display: inline-block; /* Отображать как строчно-блочный элемент */
-            max-width: 180px; /* Максимальная ширина виджета */
-            margin: 10px auto; /* Центрирование виджета по горизонтали с отступами */
-            text-align: center; /* Выравнивание текста по центру */
-            font-family: Arial, sans-serif; /* Шрифт текста виджета */
-            text-decoration: none; /* Убираем подчеркивание ссылки */
-            color: #333; /* Цвет текста */
-            border: 1px solid #ccc; /* Параметры рамки */
-            padding: 10px; /* Внутренние отступы */
-            border-radius: 5px; /* Скругленные углы */
-            background-color: #f0f0f0; /* Цвет фона */
-        }
-        .weatherwidget-io:hover {
-            background-color: #e0e0e0; /* Цвет фона при наведении */
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -49,11 +29,18 @@
         </section>
         <!-- Вставка виджета погоды -->
         <div id="weather-widget">
-            <a class="weatherwidget-io" 
-               href="https://sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%BA%D0%B8%D0%BB%D0%B8%D1%8F" 
-               data-label_1="Кілія" data-label_2="Погода" data-theme="original" 
-               target="_blank"
-               onclick="window.open(this.href,'_blank');return false;">Кілія Погода</a>
+            <a class="weatherwidget-io" href="https://sinoptik.ua/погода-килія" data-label_1="Кілія" data-label_2="Погода" data-theme="original">Кілія Погода</a>
+            <script>
+                !function(d,s,id){
+                    var js,fjs=d.getElementsByTagName(s)[0];
+                    if(!d.getElementById(id)){
+                        js=d.createElement(s);
+                        js.id=id;
+                        js.src='https://weatherwidget.io/js/widget.min.js';
+                        fjs.parentNode.insertBefore(js,fjs);
+                    }
+                }(document,'script','weatherwidget-io-js');
+            </script>
         </div>
     </main>
     <footer>
@@ -63,7 +50,5 @@
     <div id="banner">
         <img src="banner.png" alt="Рекламний банер">
     </div>
-    <!-- Загрузка скрипта виджета погоды в конце body -->
-    <script src="https://weatherwidget.io/js/widget.min.js"></script>
 </body>
 </html>

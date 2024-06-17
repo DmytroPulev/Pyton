@@ -27,21 +27,6 @@
             <h2>Ласкаво просимо!</h2>
             <p>Цей веб-підручник допоможе вам освоїти основи програмування на Python.</p>
         </section>
-        <!-- Вставка виджета погоды -->
-        <div id="weather-widget">
-            <a class="weatherwidget-io" href="https://sinoptik.ua/погода-килія" data-label_1="Кілія" data-label_2="Погода" data-theme="original" target="_blank">Кілія Погода</a>
-            <script>
-                !function(d,s,id){
-                    var js,fjs=d.getElementsByTagName(s)[0];
-                    if(!d.getElementById(id)){
-                        js=d.createElement(s);
-                        js.id=id;
-                        js.src='https://weatherwidget.io/js/widget.min.js';
-                        fjs.parentNode.insertBefore(js,fjs);
-                    }
-                }(document,'script','weatherwidget-io-js');
-            </script>
-        </div>
     </main>
     <footer>
         <p>&copy; 2024 Веб-підручник з інформатики</p>
@@ -49,6 +34,11 @@
     <!-- Банер -->
     <div id="banner">
         <img src="banner.png" alt="Рекламний банер">
+    </div>
+
+    <!-- Виджет курсов валют -->
+    <div id="currency-widget">
+        <iframe src="https://www.currencyconverterrate.com/widget/currency-converter-widget-v3.php?wid=fsa" width="240" height="150"></iframe>
     </div>
 </body>
 </html>

@@ -71,8 +71,8 @@ footer {
     position: fixed;
     bottom: 10px;
     left: 10px;
-    width: 6cm; /* Ширина банера */
-    height: 3cm; /* Висота банера */
+    width: 227px; /* Ширина баннера (6 см * 37.8 пикселей) */
+    height: 113px; /* Высота баннера (3 см * 37.8 пикселей) */
 }
 
 #banner img {

@@ -9,9 +9,9 @@
     <style>
         /* Базовый стиль для ссылки виджета */
         .weatherwidget-io {
-            display: block; /* Отображать как блочный элемент */
-            max-width: 250px; /* Максимальная ширина виджета */
-            margin: 0 auto; /* Центрирование виджета по горизонтали */
+            display: inline-block; /* Отображать как строчно-блочный элемент */
+            max-width: 180px; /* Максимальная ширина виджета */
+            margin: 10px auto; /* Центрирование виджета по горизонтали с отступами */
             text-align: center; /* Выравнивание текста по центру */
             font-family: Arial, sans-serif; /* Шрифт текста виджета */
             text-decoration: none; /* Убираем подчеркивание ссылки */
@@ -28,10 +28,10 @@
 </head>
 <body>
     <header>
-        <!-- Логотип і основний заголовок сайту -->
+        <!-- Логотип и основной заголовок сайта -->
         <img src="logo.png" alt="Логотип" class="logo">
         <h1>Веб-підручник з інформатики: Програмування на Python</h1>
-        <!-- Навігаційне меню -->
+        <!-- Навигационное меню -->
         <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
@@ -50,7 +50,7 @@
         <!-- Вставка виджета погоды -->
         <div id="weather-widget">
             <a class="weatherwidget-io" href="https://sinoptik.ua/%D0%BF%D0%BE%D0%B3%D0%BE%D0%B4%D0%B0-%D0%BA%D0%B8%D0%BB%D0%B8%D1%8F" 
-               data-label_1="Кілія" data-label_2="Погода" data-theme="original">Кілія Погода</a>
+               data-label_1="Кілія" data-label_2="Погода" data-theme="original" target="_blank">Кілія Погода</a>
         </div>
     </main>
     <footer>

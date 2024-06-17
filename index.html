@@ -5,19 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Веб-підручник з інформатики: Програмування на Python</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Стили для контейнера виджета */
-        #weather-widget {
-            width: 3cm; /* Ширина контейнера виджета */
-            height: 6cm; /* Высота контейнера виджета */
-            margin: 20px auto; /* Центрирование по горизонтали с отступами сверху и снизу */
-        }
-    </style>
 </head>
 <body>
     <header>
         <!-- Логотип і основний заголовок сайту -->
-        <img src="images/logo.png" alt="Логотип" class="logo">
+        <img src="logo.png" alt="Логотип" class="logo">
         <h1>Веб-підручник з інформатики: Програмування на Python</h1>
         <!-- Навігаційне меню -->
         <nav>
@@ -41,31 +33,7 @@
     </footer>
     <!-- Банер -->
     <div id="banner">
-        <img src="banner.png" alt="Рекламний банер" width="180" height="90">
+        <img src="banner.png" alt="Рекламний банер">
     </div>
-    <!-- Виджет погоды -->
-    <div id="weather-widget"></div>
-    <script>
-        window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
-        window.myWidgetParam.push({
-            id: 11,
-            cityid: '703448',  // Идентификатор города (например, для Киева)
-            appid: '13f6365f57ccbb3ad52bee51c6fde5790787052',  // API ключ OpenWeatherMap
-            units: 'metric',  // Единицы измерения (metric - для Цельсия)
-            containerid: 'weather-widget',  // Идентификатор контейнера для виджета
-        });
-
-        (function() {
-            var script = document.createElement('script');
-            script.async = true;
-            script.charset = "utf-8";
-            script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(script, s);
-        })();
-    </script>
 </body>
 </html>
-
-
-

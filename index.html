@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Веб-підручник з інформатики: Програмування на Python</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Калькулятор</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -24,8 +24,12 @@
     </header>
     <main>
         <section id="content">
-            <h2>Ласкаво просимо!</h2>
-            <p>Цей веб-підручник допоможе вам освоїти основи програмування на Python.</p>
+            <h2>Калькулятор</h2>
+            <div id="calculator">
+                <input type="text" id="input" placeholder="Введите выражение (например, 2 + 2)">
+                <button id="calculate">Вычислить</button>
+                <div id="result"></div>
+            </div>
         </section>
     </main>
     <footer>
@@ -34,7 +38,20 @@
     <!-- Банер -->
     <div id="banner">
         <img src="banner.png" alt="Рекламний банер">
-   
     </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#calculate').on('click', function() {
+                var input = $('#input').val();
+                try {
+                    var result = eval(input);
+                    $('#result').text('Результат: ' + result);
+                } catch (e) {
+                    $('#result').text('Некорректное выражение');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

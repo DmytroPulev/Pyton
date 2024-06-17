@@ -6,12 +6,26 @@
     <title>Уроки - Веб-підручник з інформатики: Програмування на Python</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Стили для фона */
-        body {
-            background-image: url('background.jpg'); /* Замените 'background.jpg' на путь к вашей картинке */
-            background-size: cover; /* Масштабирование фона по размеру окна */
-            background-repeat: no-repeat; /* Избегание повторения фона */
-            background-attachment: fixed; /* Фиксация фона при прокрутке */
+        /* Стилі для тестів */
+        .lesson {
+            margin-bottom: 30px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .question {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .answers {
+            margin-bottom: 10px;
+        }
+        .answer {
+            margin-right: 10px;
+        }
+        .result {
+            font-weight: bold;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -34,25 +48,71 @@
     <main>
         <section id="content">
             <h2>Уроки з програмування на Python</h2>
-            <ul>
-                <li>
-                    <h3>Підручник Python</h3>
-                    <p>Python — це потужна мова програмування, яка проста у вивченні. Він має ефективні структури даних високого рівня та простий, але ефективний підхід до об’єктно-орієнтованого програмування. Елегантний синтаксис і динамічна типізація Python разом з його інтерпретованим характером роблять його ідеальною мовою для створення сценаріїв і швидкої розробки додатків у багатьох сферах на більшості платформ.</p>
-                    <a href="https://docs.python.org/uk/3/tutorial/index.html" target="_blank">Перейти до Підручника Python</a>
-                </li>
-            </ul>
+
+            <!-- Перший урок -->
+            <div class="lesson">
+                <h3>Урок 1: Основи Python</h3>
+                <p>Python — це потужна мова програмування, яка проста у вивченні. Він має ефективні структури даних високого рівня та простий, але ефективний підхід до об’єктно-орієнтованого програмування. Елегантний синтаксис і динамічна типізація Python разом з його інтерпретованим характером роблять його ідеальною мовою для створення сценаріїв і швидкої розробки додатків у багатьох сферах на більшості платформ.</p>
+                
+                <div class="quiz">
+                    <div class="question">Питання 1: Що таке Python?</div>
+                    <div class="answers">
+                        <label class="answer"><input type="radio" name="q1" value="a"> Мова програмування</label>
+                        <label class="answer"><input type="radio" name="q1" value="b"> Графічний інтерфейс</label>
+                        <label class="answer"><input type="radio" name="q1" value="c"> Комп'ютерна гра</label>
+                    </div>
+                </div>
+
+                <button onclick="submitQuiz('lesson1')">Перевірити тест</button>
+                <div id="quizResult-lesson1" class="result"></div>
+            </div>
+
+            <!-- Другий урок -->
+            <div class="lesson">
+                <h3>Урок 2: Робота зі змінними в Python</h3>
+                <p>В Python змінні не потребують оголошення типів; вони визначаються автоматично при присвоєнні значення.</p>
+                
+                <div class="quiz">
+                    <div class="question">Питання 1: Як оголошуються змінні в Python?</div>
+                    <div class="answers">
+                        <label class="answer"><input type="radio" name="q2" value="a"> За допомогою ключового слова "var"</label>
+                        <label class="answer"><input type="radio" name="q2" value="b"> За допомогою ключового слова "let"</label>
+                        <label class="answer"><input type="radio" name="q2" value="c"> Просто присвоюючи значення змінній</label>
+                    </div>
+                </div>
+
+                <button onclick="submitQuiz('lesson2')">Перевірити тест</button>
+                <div id="quizResult-lesson2" class="result"></div>
+            </div>
+            
         </section>
     </main>
     <footer>
         <p>&copy; 2024 Веб-підручник з інформатики</p>
-        <!-- Ссылка на ІДГУ -->
-        <div class="social-links">
-            <a href="http://idgu.edu.ua/" target="_blank">ІДГУ</a>
-        </div>
     </footer>
-    <!-- Банер -->
-    <div id="banner">
-        <img src="banner.png" alt="Рекламний банер">
-    </div>
+    <script>
+        // Функція для перевірки тестів
+        function submitQuiz(lessonId) {
+            var quizElement = document.querySelector(`#${lessonId} .quiz`);
+            var questions = quizElement.querySelectorAll('.question');
+            var resultsElement = document.getElementById(`quizResult-${lessonId}`);
+            var score = 0;
+
+            questions.forEach(function(question, index) {
+                var answer = quizElement.querySelector(`input[name="q${index + 1}"]:checked`);
+                if (answer) {
+                    if (answer.value === "a") {
+                        score++;
+                    }
+                }
+            });
+
+            if (score > 0) {
+                resultsElement.textContent = `Ваш результат: ${score} з ${questions.length}`;
+            } else {
+                resultsElement.textContent = "Будь ласка, виберіть відповідь на всі питання.";
+            }
+        }
+    </script>
 </body>
 </html>

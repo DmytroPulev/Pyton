@@ -12,77 +12,6 @@
             background-size: cover; /* Масштабирование картинки по размеру окна */
             background-repeat: no-repeat; /* Избегание повторения картинки */
             background-attachment: fixed; /* Фиксация фона при прокрутке */
-            font-family: Impact, Charcoal, sans-serif; /* Шрифт для всего тела */
-            font-size: 14px; /* Размер шрифта для всего тела */
-            text-align: center; /* Выравнивание текста по центру */
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .logo {
-            height: 50px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-
-        nav ul li a:hover {
-            color: #ddd;
-        }
-
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1, h2 {
-            color: #333;
-            font-family: Impact, Charcoal, sans-serif; /* Шрифт заголовков */
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        #banner {
-            position: fixed;
-            bottom: 10px;
-            left: 10px;
-            width: 227px; /* Ширина баннера (6 см * 37.8 пикселей) */
-            height: 113px; /* Высота баннера (3 см * 37.8 пикселей) */
-        }
-
-        #banner img {
-            width: 100%;
-            height: 100%;
         }
 
         /* Стили для виджета валютного курса */
@@ -96,7 +25,27 @@
             right: 10px;
             text-align: center;
             color: #333; /* Цвет текста */
-            font-family: Impact, Charcoal, sans-serif; /* Шрифт текста */
+            font-family: Arial, sans-serif; /* Шрифт текста */
+        }
+
+        /* Стили для виджета часу */
+        .clock-widget {
+            width: 150px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            padding: 10px;
+            position: fixed;
+            bottom: 10px;
+            right: 270px;
+            text-align: center;
+            color: #333; /* Цвет текста */
+            font-family: Arial, sans-serif; /* Шрифт текста */
+        }
+
+        /* Стили для футера */
+        footer {
+            text-align: center;
+            margin-top: 20px;
         }
 
         footer p {
@@ -108,18 +57,46 @@
             margin-right: 10px;
         }
 
-        /* Стилі для розділу Welcome */
-        #welcome {
-            margin: 20px 0;
+        /* Стили для основного контента */
+        main p {
+            color: #000; /* Цвет текста */
+            font-family: Arial, sans-serif; /* Шрифт текста */
+            text-decoration: none; /* Удаление подчеркивания */
+        }
+
+        /* Стилі для розділів головної сторінки */
+        .section {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- Логотип і основний заголовок сайту -->
+        <!-- Логотип и основной заголовок сайта -->
         <img src="logo.png" alt="Логотип" class="logo">
         <h1>Веб-підручник з інформатики: Програмування на Python</h1>
-        <!-- Навігаційне меню -->
+        <!-- Навигационное меню -->
         <nav>
             <ul>
                 <li><a href="index.html">Головна</a></li>
@@ -133,9 +110,24 @@
     <main>
         <section class="section" id="welcome">
             <h2>Ласкаво просимо!</h2>
-            <p>Вітаємо вас на нашому веб-підручнику з інформатики, присвяченому програмуванню на Python. Незалежно від того, чи ви студент, програміст-початківець або досвідчений професіонал, наш ресурс надасть вам усі необхідні знання та навички для успішного освоєння цієї потужної та універсальної мови програмування.</p>
-            <p>Python відомий своєю простотою та елегантністю, що робить його ідеальним вибором для новачків, а також для розробників, які бажають швидко створювати складні програми. На нашому сайті ви знайдете покрокові уроки, відео-лекції, корисні посилання та багато інших ресурсів, які допоможуть вам у вивченні Python.</p>
-            <p>Приєднуйтесь до нашої спільноти, дізнавайтеся про останні новини у світі програмування, беріть участь у обговореннях та обмінюйтеся досвідом. Разом ми зробимо процес навчання цікавим та захоплюючим!</p>
+            <p>Цей веб-підручник допоможе вам освоїти основи програмування на Python. Ви знайдете тут уроки, відео, корисні посилання та багато іншого для вивчення цієї потужної мови програмування.</p>
+        </section>
+        <section class="section" id="about">
+            <h2>Про нас</h2>
+            <p>Наш веб-підручник створений для студентів та всіх, хто хоче навчитися програмувати на Python. Ми пропонуємо зрозумілі та детальні матеріали для всіх рівнів підготовки.</p>
+            <img src="about.jpg" alt="Про нас">
+        </section>
+        <section class="section" id="latest-news">
+            <h2>Останні новини</h2>
+            <p>Слідкуйте за останніми новинами та оновленнями у світі Python та програмування. Дізнавайтеся про нові уроки, відео та корисні ресурси.</p>
+        </section>
+        <section class="section" id="featured-articles">
+            <h2>Вибрані статті</h2>
+            <p>Читайте наші вибрані статті про Python, його можливості та застосування. Дізнайтеся більше про найкращі практики програмування та нові техніки.</p>
+        </section>
+        <section class="section" id="contact">
+            <h2>Контакти</h2>
+            <p>Маєте питання? Зв'яжіться з нами через нашу контактну форму або знайдіть нас у соціальних мережах.</p>
         </section>
     </main>
     <footer>
@@ -145,7 +137,7 @@
             <a href="http://idgu.edu.ua/" target="_blank">ІДГУ</a>
         </div>
     </footer>
-    <!-- Банери -->
+    <!-- Банеры -->
     <div id="banner">
         <img src="banner.png" alt="Рекламний банер">
     </div>
@@ -158,6 +150,12 @@
     <div class="currency-widget">
         <h3>Курс USD/UAH</h3>
         <div id="exchange-rate"></div>
+    </div>
+
+    <!-- Виджет часу -->
+    <div class="clock-widget">
+        <h3>Поточний час</h3>
+        <div id="current-time"></div>
     </div>
 
     <!-- Скрипт для получения курса валют -->

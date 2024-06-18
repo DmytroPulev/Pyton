@@ -13,6 +13,43 @@
             background-repeat: no-repeat; /* Избегание повторения фона */
             background-attachment: fixed; /* Фиксация фона при прокрутке */
         }
+
+        /* Стили для основного контента */
+        main {
+            padding: 20px;
+        }
+
+        /* Стилі для розділів сторінки */
+        .section {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .section li {
+            margin-bottom: 10px;
+        }
+
+        .section li a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .section li a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -32,13 +69,28 @@
         </nav>
     </header>
     <main>
-        <section id="content">
-            <h2>Корисні посилання</h2>
-            <ul>
-                <li><a href="http://idgu.edu.ua/" target="_blank">Ізмаїльський державний гуманітарний університет</a></li>
-                <li><a href="https://mon.gov.ua/" target="_blank">Міністерство освіти і науки України</a></li>
-                <li><a href="https://www.w3schools.com/python/" target="_blank">Підручник з Python</a></li>
-            </ul>
+        <section class="section" id="idgu-link">
+            <h2>Ізмаїльський державний гуманітарний університет</h2>
+            <p>Офіційний сайт Ізмаїльського державного гуманітарного університету.</p>
+            <a href="http://idgu.edu.ua/" target="_blank">Перейти на сайт</a>
+        </section>
+
+        <section class="section" id="mon-link">
+            <h2>Міністерство освіти і науки України</h2>
+            <p>Офіційний сайт Міністерства освіти і науки України.</p>
+            <a href="https://mon.gov.ua/" target="_blank">Перейти на сайт</a>
+        </section>
+
+        <section class="section" id="w3schools-link">
+            <h2>Підручник з Python на W3Schools</h2>
+            <p>Офіційний підручник з мови програмування Python на W3Schools.</p>
+            <a href="https://www.w3schools.com/python/" target="_blank">Перейти на сайт</a>
+        </section>
+
+        <section class="section" id="python-org-link">
+            <h2>Головний сайт мови програмування Python</h2>
+            <p>Офіційний сайт мови програмування Python.</p>
+            <a href="https://www.python.org/" target="_blank">Перейти на сайт</a>
         </section>
     </main>
     <footer>

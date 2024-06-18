@@ -71,11 +71,33 @@ footer {
     position: fixed;
     bottom: 10px;
     left: 10px;
-    width: 6cm; /* Ширина банера */
-    height: 3cm; /* Висота банера */
+    width: 227px; /* Ширина баннера (6 см * 37.8 пикселей) */
+    height: 113px; /* Высота баннера (3 см * 37.8 пикселей) */
 }
 
 #banner img {
     width: 100%;
     height: 100%;
+}
+
+.contact-info {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.contact-info p {
+    font-size: 18px;
+    color: #555;
+}
+
+.clock {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
 }

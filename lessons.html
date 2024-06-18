@@ -13,6 +13,41 @@
             background-repeat: no-repeat; /* Избегание повторения фона */
             background-attachment: fixed; /* Фиксация фона при прокрутке */
         }
+
+        /* Стили для основного контента */
+        main p {
+            color: #000; /* Цвет текста */
+            font-family: Arial, sans-serif; /* Шрифт текста */
+            text-decoration: none; /* Удаление подчеркивания */
+        }
+
+        /* Стилі для розділів сторінки */
+        .section {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .section a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -32,51 +67,42 @@
         </nav>
     </header>
     <main>
-        <section id="content">
+        <section class="section" id="lessons">
             <h2>Уроки з програмування на Python</h2>
+            <div class="lesson">
+                <h4>Урок №1</h4>
+                <p><a href="https://ravesli.com/intro-python/" target="_blank">Введення в мову Python</a></p>
+            </div>
 
-            <!-- Використання блоку div для прокрутки уроків -->
-            <div class="lessons-container">
-               
-                <!-- Уроки в блоках div з прокруткою -->
-                <div class="lesson">
-                    <h4>Що таке Python?</h4>
-                    <p><a href="https://ravesli.com/intro-python/" target="_blank">Введення в мову Python</a></p>
-                </div>
+            <div class="lesson">
+                <h4>Урок №2</h4>
+                <p><a href="https://ravesli.com/get-started-python/" target="_blank">Як почати працювати з Python?</a></p>
+            </div>
 
-                <div class="lesson">
-                    <h4>Як почати працювати з Python?</h4>
-                    <p><a href="https://ravesli.com/get-started-python/" target="_blank">Як почати працювати з Python?</a></p>
-                </div>
+            <div class="lesson">
+                <h4>Урок №3</h4>
+                <p><a href="https://ravesli.com/if-else-python/" target="_blank">Оператори if else у Python</a></p>
+            </div>
 
-                <!-- Додайте інші уроки на основі вашого списку -->
+            <div class="lesson">
+                <h4>Урок №4</h4>
+                <p><a href="https://ravesli.com/for-loop-python/" target="_blank">Цикл for в Python</a></p>
+            </div>
 
-                <div class="lesson">
-                    <h4>Оператори if else у Python</h4>
-                    <p><a href="https://ravesli.com/if-else-python/" target="_blank">Оператори if else у Python</a></p>
-                </div>
+            <div class="lesson">
+                <h4>Урок №5</h4>
+                <p><a href="https://ravesli.com/while-python/" target="_blank">Цикл while в Python</a></p>
+            </div>
 
-                <div class="lesson">
-                    <h4>Цикл for в Python</h4>
-                    <p><a href="https://ravesli.com/for-loop-python/" target="_blank">Цикл for в Python</a></p>
-                </div>
+            <div class="lesson">
+                <h4>Урок №6</h4>
+                <p><a href="https://ravesli.com/break-continue-python/" target="_blank">Оператори break і continue в Python</a></p>
+            </div>
 
-                <div class="lesson">
-                    <h4>Цикл while в Python</h4>
-                    <p><a href="https://ravesli.com/while-python/" target="_blank">Цикл while в Python</a></p>
-                </div>
-
-                <div class="lesson">
-                    <h4>Оператори break і continue в Python</h4>
-                    <p><a href="https://ravesli.com/break-continue-python/" target="_blank">Оператори break і continue в Python</a></p>
-                </div>
-
-                <div class="lesson">
-                    <h4>Оператор pass в Python</h4>
-                    <p><a href="https://ravesli.com/pass-python/" target="_blank">Оператор pass в Python</a></p>
-                </div>
-
-            </div><!-- /.lessons-container -->
+            <div class="lesson">
+                <h4>Урок №7</h4>
+                <p><a href="https://ravesli.com/pass-python/" target="_blank">Оператор pass в Python</a></p>
+            </div>
         </section>
     </main>
     <footer>

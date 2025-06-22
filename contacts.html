@@ -1,139 +1,77 @@
 <!DOCTYPE html>
+<!-- mylead-verification: 6e2b6c24dc3d282bcc7576c40e612711 -->
 <html lang="uk">
 <head>
-    <head>
-    <!-- mylead-verification: 6e2b6c24dc3d282bcc7576c40e612711 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mylead-verification" content="6e2b6c24dc3d282bcc7576c40e612711">
     <title>Головна - Веб-підручник з інформатики: Програмування на Python</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Стили для фона */
         body {
-            background-image: url('background.jpg'); 
-            background-size: cover; 
-            background-repeat: no-repeat; 
-            background-attachment: fixed; 
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
         }
 
-      
+        header, footer {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
         main {
             padding: 20px;
         }
 
-        
         .section {
-            background-color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 20px;
+            background-color: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h2 {
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        .section p {
-            margin-bottom: 10px;
-            color: #666;
-        }
-
-        .section form {
-            margin-top: 20px;
-        }
-
-        .section form label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .section form input[type="text"],
-        .section form input[type="email"] {
-            width: 8cm; /* Ширина 8 см */
-            height: 28px; /* Висота 1 см = 28 пікселів при 96 ppi */
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 14px;
-        }
-
-        .section form textarea {
-            width: 8cm; /* Ширина 8 см */
-            height: 4cm; /* Висота 4 см = 384 пікселів при 96 ppi */
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            font-size: 14px;
-            resize: vertical;
-        }
-
-        .section form button {
-            background-color: #0066cc;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .section form button:hover {
-            background-color: #0050a5;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- Логотип и основной заголовок сайта -->
-        <img src="logo.png" alt="Логотип" class="logo">
         <h1>Веб-підручник з інформатики: Програмування на Python</h1>
-        <!-- Навигационное меню -->
         <nav>
             <ul>
-                <li><a href="index.html">Головна</a></li>
+                <li class="active"><a href="index.html">Головна</a></li>
                 <li><a href="lessons.html">Уроки</a></li>
                 <li><a href="videos.html">Відео</a></li>
                 <li><a href="links.html">Корисні посилання</a></li>
-                <li class="active"><a href="contacts.html">Контакти</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="section" id="contact-info">
-            <h2>Контактна інформація</h2>
-            <h3>Пулєв Дмитро Дмитрович</h3>
-            <p><strong>Дата народження:</strong> 1993 рік</p>
-            <p><strong>Освіта:</strong> Ізмаїльський державний гуманітарний університет (закінчив у 2024 році)</p>
-            <p><strong>Місце роботи:</strong> 23 державна пожежно-рятувальна частина 3 державного пожежно-рятувального загону ГУ ДСНС України в Одеській області</p>
-            <p><strong>Номер телефону:</strong> <a href="tel:+380982392772">+38098-239-27-72</a></p>
-            <p><strong>Електронна пошта:</strong> <a href="mailto:dimapulev5@gmail.com">dimapulev5@gmail.com</a></p>
-        </section>
 
-        <section class="section" id="feedback">
-            <h2>Зворотній зв'язок</h2>
-            <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
-                <label for="name">Ім'я:</label><br>
-                <input type="text" id="name" name="name" required><br>
-                <label for="email">Електронна пошта:</label><br>
-                <input type="email" id="email" name="email" required><br>
-                <label for="message">Повідомлення:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br>
-                <button type="submit">Надіслати</button>
-            </form>
+    <main>
+        <section class="section">
+            <h2>Ласкаво просимо!</h2>
+            <p>Це головна сторінка веб-підручника з програмування на Python для шкільного курсу інформатики.</p>
         </section>
     </main>
+
     <footer>
         <p>&copy; 2025 Веб-підручник з інформатики</p>
-        <!-- Ссылка на НУЦЗУ -->
-        <div class="social-links">
-            <a href="https://nuczu.edu.ua/ukr/" target="_blank">НУЦЗУ</a>
-        </div>
+        <a href="https://nuczu.edu.ua/ukr/" target="_blank">НУЦЗУ</a>
     </footer>
 </body>
 </html>
